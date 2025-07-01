@@ -46,7 +46,6 @@ Um servidor PostgreSQL ativo
 
 1. Clonar o Repositório
 git clone https://github.com/alvarossantos/sge.git
-cd sge
 
 2. Configurar o Ambiente Virtual
 É uma boa prática usar um ambiente virtual para isolar as dependências do projeto.
