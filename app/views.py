@@ -13,7 +13,12 @@ def home(request):
     graphic_product_brand_metric = metrics.get_graphic_product_brand_metric()
     daily_sales_data = metrics.get_daily_sales_data()
     daily_sales_quantity_data = metrics.get_daily_sales_quantity_data()
-    ai_result = AIResult.objects.first().result
+    first_ai_object = AIResult.objects.first()
+
+    if first_ai_object:
+        ai_result = first_ai_object.result
+    else:
+        ai_result = "Nenhum resultado de IA foi encontrado no banco de dados."
 
     context = {
         'product_metrics': product_metrics,
